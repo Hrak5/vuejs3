@@ -9,12 +9,15 @@ Vue.config.productionTip = false
 import VueAxios from "vue-axios";
 import axios from "axios";
 
+import mixins from "./mixins";
+
 Vue.use(VueAxios, axios);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  mixins,
   components: { App },
   template: '<App/>'
 })
